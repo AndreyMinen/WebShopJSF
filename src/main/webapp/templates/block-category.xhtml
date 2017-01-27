@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+    </h:head>
+    <h:body>
+        
+        <ui:composition>
+            
+            <div id="block-category">
+                
+                <p class="category-title">Категория товаров</p>
+			    
+                <ul>
+			    
+                    <h:form id="accordion">
+                        <p:accordionPanel>
+                            <p:tab title="Мобильные телефоны">
+                                <p:commandLink styleClass="category_style" value="Все модели" action="#{productsController.productsByAllModel()}" update=":content-style:list-product :form-page :form-sort" style="font-weight: bold;">
+                                    <f:param name="type" value="mobile" />
+                                </p:commandLink>
+                                <c:forEach items="#{categoryController.mobiles}" var="category">
+                                    <p:commandLink styleClass="category_style" value="#{category.brand}" action="#{productsController.productsByCategory()}" update=":content-style:list-product :form-page :form-sort">
+                                        <f:param name="type" value="#{category.type}" />
+                                        <f:param name="brand" value="#{category.brand}" />
+                                    </p:commandLink>
+                                </c:forEach>
+                            </p:tab>
+                            <p:tab title="Планшеты">
+                                <p:commandLink styleClass="category_style" value="Все модели" style="font-weight: bold;" />
+                                <c:forEach items="#{categoryController.notepad}" var="category">
+                                    <p:commandLink styleClass="category_style" value="#{category.brand}" />
+                                </c:forEach>
+                            </p:tab>
+                            <p:tab title="Ноутбуки">
+                                <p:commandLink styleClass="category_style" value="Все модели" style="font-weight: bold;" />
+                                <c:forEach items="#{categoryController.notebook}" var="category">
+                                    <p:commandLink styleClass="category_style" value="#{category.brand}" />
+                                </c:forEach>
+                            </p:tab>
+                        </p:accordionPanel>
+                    </h:form>
+            </ul>
+                
+            </div>
+            
+        </ui:composition>
+        
+    </h:body>
+</html>
+

@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        
+    </h:head>
+    <h:body>
+        
+        <ui:composition>
+            
+            <div id="header-top-block">
+			 
+		<ul id="header-top-menu">
+				 
+                    <li>Ваш город - <span>Москва</span></li>
+                    <li><a href="o-nas">О нас</a></li>
+                    <li><a href="magaziny">Магазины</a></li>
+                    <li><a href="contacts">Контакты</a></li>
+					 
+		</ul>
+				 
+		<p id="req-auth-title" align="right"><a class="top-auth" href="auth">Вход</a><a href="registration">Регистрация</a></p>
+				 
+            </div>
+            
+            <h:graphicImage library="images" name="logo.png" width="165" height="155" style="float: left;"/>
+            <p id="text-about-logo"><b>Интернет-Магазин</b><br /><span>Цифровой техники</span></p>
+            
+            <div id="info-right">
+			 
+		<p>Звонок бесплатный</p>
+		<p><b>8-(952)-817-65-91</b></p>
+		<p>Режим работы:</p>
+		<p>Будние дни: с 8 до 19</p>
+		<p>Выходные: Суббота, Воскресенье</p>
+            </div>
+            
+            <div id="img-right-info">
+		    
+                <h:graphicImage library="images" name="phone.png" height="35" width="30" />
+                <h:graphicImage library="images" name="time.png" height="45" width="45" />
+			    
+            </div>
+            
+            <div id="block-search">
+		    
+		<h:form>
+			    
+                    <p:inputText styleClass="input-search" value="" placeholder="Поиск товара" />
+				    
+                    <h:commandButton styleClass="button-search" value="Поиск" actionListener="ВРЕМЕННО" />
+				    
+		</h:form>
+		    
+            </div>
+            
+            <h:graphicImage library="images" name="search.png" styleClass="img-search" />
+		    
+            <div id="top-menu">
+		    
+		<ul>
+			    
+                    <li><a href=""><h:graphicImage library="images" name="home.png" width="25" height="25" />Главная</a></li>
+                    <li><a href=""><h:graphicImage library="images" name="new.png" width="25" height="25" />Новинки</a></li>
+                    <li><a href=""><h:graphicImage library="images" name="best-price.png" width="25" height="25" />Лидеры продаж</a></li>
+                    <li><a href=""><h:graphicImage library="images" name="sale.png" width="25" height="25" />Распродажа</a></li>
+				    
+		</ul>
+			    
+                <p align="right" id="nav-crashed"><a href=""><h:graphicImage library="images" name="crashed.png" width="25" height="25" /><b>Корзина пуста</b></a></p>
+		    
+            </div>
+            
+        </ui:composition>
+        
+    </h:body>
+</html>
+

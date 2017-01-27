@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+    </h:head>
+    <h:body>
+        
+        <ui:composition>
+            
+            <div id="block-parameter">
+		    
+		<p class="category-title">Поиск по параметрам</p>
+			    
+		<p class="title-filter">Стоимость</p>
+			    
+		<h:form>
+			    
+                    <div id="block-input-price">
+				    
+			<ul>
+					    
+                            <li><p>от</p></li>
+                            <li><h:inputText value="1000" /></li>
+                            <li><p>до</p></li>
+                            <li><h:inputText value="30000" /></li>
+			
+                        </ul>    
+						    
+                    </div>  		
+                    <div id="block-track-bar"></div>
+						    
+			<p class="title-filter">Производители</p>
+						    
+                        <h:selectManyCheckbox styleClass="checkbox-brand" layout="pageDirection" value="false" >
+                            <f:selectItem itemLabel="Бренд1"  />
+                            <f:selectItem itemLabel="Бренд2" />
+                            <f:selectItem itemLabel="Бренд3" />
+                        </h:selectManyCheckbox>
+                           
+			
+                        <center><h:commandButton id="button_param_search" value="Найти" styleClass="button-param-search" actionListener="ВРЕМЕННО" /></center>
+						    
+                    </h:form>
+			    
+            </div>
+            
+        </ui:composition>
+        
+    </h:body>
+</html>
+

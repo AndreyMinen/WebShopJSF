@@ -1,0 +1,4 @@
+target/*
+src/test/*
+faces-config.NavData
+nb-configuration.xml
